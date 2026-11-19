@@ -1,0 +1,7 @@
+{
+  "name": "qqnt-group-cleaner",
+  "version": "0.1.4",
+  "private": true,
+  "description": "当前 QQNT / LiteLoader 环境的本地群清理插件",
+  "license": "MIT"
+}

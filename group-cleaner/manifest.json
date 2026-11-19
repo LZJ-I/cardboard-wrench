@@ -1,0 +1,18 @@
+{
+  "manifest_version": 4,
+  "type": "extension",
+  "name": "群清理助手",
+  "slug": "group_cleaner",
+  "description": "搜索群聊、保留重要群、单个或批量退群，并保持列表位置",
+  "version": "0.1.4",
+  "icon": "./assets/icon.svg",
+  "thumb": "./assets/icon.svg",
+  "authors": [{ "name": "本地定制" }],
+  "platform": ["win32"],
+  "dependencies": ["ipc_interceptor"],
+  "injects": {
+    "main": "./main.js",
+    "preload": "./preload.js",
+    "renderer": "./renderer.mjs"
+  }
+}

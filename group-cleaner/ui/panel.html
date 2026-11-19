@@ -1,0 +1,19 @@
+<section class="panel">
+  <header class="heading">
+    <div><span class="eyebrow">GROUP CLEANER · 0.1.4</span><h1>群清理助手</h1><p>点击群名打开聊天，整理后继续从原位置查看。</p></div>
+    <button class="secondary" data-action="refresh">刷新群列表</button>
+  </header>
+  <div class="stats" aria-live="polite"><span data-stat="total">尚未读取群列表</span><span data-stat="retained"></span><span data-stat="selected">已选 0 个</span></div>
+  <div class="calibration"><div><strong>退群适配</strong><p data-part="calibration-status">正在检查默认适配。</p></div><button class="secondary" data-action="calibrate">手动校准退群</button><button class="text-button" data-action="cancel-calibration" hidden>停止校准</button></div>
+  <div class="filters">
+    <input type="search" aria-label="搜索群名、群备注或群号" placeholder="搜索群名、备注、群号…" data-input="search" />
+    <select aria-label="筛选群聊" data-input="filter"><option value="all">全部群聊</option><option value="eligible">可退出的群</option><option value="retained">已保留</option><option value="owner">我是群主</option></select>
+    <select aria-label="群聊排序" data-input="sort"><option value="name">按名称</option><option value="members">按人数</option></select>
+  </div>
+  <div class="toolbar"><label class="select-all"><input type="checkbox" data-input="select-all" />选择当前结果中的可退群</label><button class="text-button" data-action="clear">清空选择</button><span data-stat="visible"></span></div>
+  <div class="notice" role="status" data-part="notice">首次使用请点“刷新群列表”。</div>
+  <div class="group-list" role="table" aria-label="群聊列表" tabindex="0" data-part="list"><div class="empty">群列表会显示在这里</div></div>
+  <footer class="actions"><div><strong data-part="progress">请选择要退出的群聊</strong><p>群主的群默认排除；点“保留”可保护重要群。</p></div><button class="secondary" data-action="stop" hidden>停止后续操作</button><button class="danger" data-action="leave" disabled>退出所选群（0）</button></footer>
+  <details class="results" data-part="results" hidden><summary>本次执行记录</summary><ul data-part="result-list"></ul></details>
+  <p class="footnote">主窗口快捷键：Ctrl + Shift + G。批量操作需确认具体名单；停止不会撤销已经发出的请求。</p>
+</section>

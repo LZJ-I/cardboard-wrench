@@ -1,0 +1,28 @@
+{
+  "$schema": "https://raw.githubusercontent.com/QwQ-002/types/main/plugin.schema.json",
+  "name": "ipc_interceptor",
+  "version": "1.2.0",
+  "description": "统一管理 IPC 事件",
+  "type": "commonjs",
+  "qwqnt": {
+    "name": "IPC 事件拦截器"
+  },
+  "author": "xiyue",
+  "license": "AGPL-3.0-only",
+  "main": "./dist/main/index.js",
+  "scripts": {
+    "build": "ts-node -P ./tsconfig.json scripts/build.ts",
+    "publish": "ts-node -P ./tsconfig.json scripts/build.ts --publish",
+    "dev": "ts-node -P ./tsconfig.json scripts/build.ts --watch"
+  },
+  "keywords": [],
+  "packageManager": "pnpm@10.15.0",
+  "devDependencies": {
+    "@qwqnt/types": "github:qwqnt-community/types",
+    "@types/node": "20.11.20",
+    "electron": "^37.2.5",
+    "esbuild": "^0.25.8",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.9.2"
+  }
+}

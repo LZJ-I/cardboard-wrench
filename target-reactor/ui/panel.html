@@ -1,0 +1,24 @@
+<section class="panel">
+    <header><div><p class="eyebrow">TARGET REACTOR · 0.1.0</p><h1>定点表情回应</h1><p class="subtitle">指定群、指定成员，每条新消息自动贴一个表情回应。</p></div><label class="master"><input type="checkbox" data-input="enabled"><span>启用自动回应</span></label></header>
+    <div class="notice" data-part="notice" role="status">正在读取插件状态…</div>
+    <div class="stats"><span data-stat="rules">0 条规则</span><span data-stat="success">已回应 0 条</span><span data-stat="queue">等待 0 条</span><button data-action="refresh" type="button">刷新状态 / 最近成员</button></div>
+    <div class="columns">
+        <section class="card editor"><h2 data-part="editor-title">添加规则</h2>
+            <p class="hint">填写群号和成员 QQ 号，也可从最近收到消息的群及成员中选择。</p>
+            <label>群号<input data-input="group" inputmode="numeric" placeholder="例如：123456789" list="reactor-groups" maxlength="20"><datalist id="reactor-groups"></datalist></label>
+            <label>成员 QQ 号<input data-input="member" placeholder="对方的 QQ 号（也支持 u_ 开头的 UID）" list="reactor-members" maxlength="104"><datalist id="reactor-members"></datalist></label>
+            <label>备注（选填）<input data-input="label" placeholder="方便区分这条规则" maxlength="100"></label>
+            <div class="emoji-header"><h3>选择表情</h3><span data-part="chosen">尚未选择</span></div>
+            <input class="emoji-search" data-input="emoji-search" type="search" placeholder="搜索表情，例如：吐舌、赞" aria-label="搜索表情">
+            <div class="emoji-grid" data-part="emojis" role="group" aria-label="选择自动回应表情"></div>
+            <div class="form-actions"><button class="primary" data-action="save" type="button">添加规则</button><button data-action="cancel" type="button" hidden>取消编辑</button></div>
+            <p class="hint">添加的规则单独启用；还需打开顶部总开关才会自动回应。表情回应会显示给群内成员。</p>
+        </section>
+        <section class="card"><div class="section-header"><h2>我的规则</h2><span class="hint">按当前 QQ 账号保存</span></div>
+            <div class="rules" data-part="rules"></div>
+            <div class="recent-header"><h2>最近执行</h2><span class="hint">本次启动</span></div>
+            <div class="events" data-part="events"></div>
+        </section>
+    </div>
+    <p class="footnote">只处理启用后实时收到的新群消息，不补贴历史消息。失败的规则会暂停，修改或重新启用后恢复；不会自动重试同一条消息。</p>
+</section>

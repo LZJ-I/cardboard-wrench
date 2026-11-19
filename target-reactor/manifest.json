@@ -1,0 +1,13 @@
+{
+  "manifest_version": 4,
+  "type": "extension",
+  "name": "定点表情回应",
+  "slug": "target_reactor",
+  "description": "为指定群内指定成员的新消息自动添加指定表情回应",
+  "version": "0.1.0",
+  "icon": "./assets/icon.svg",
+  "authors": [{ "name": "本地定制" }],
+  "platform": ["win32"],
+  "dependencies": ["ipc_interceptor"],
+  "injects": { "main": "./main.js", "preload": "./preload.js", "renderer": "./renderer.mjs" }
+}

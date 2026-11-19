@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self'; style-src 'self'; img-src data:; connect-src 'none'; object-src 'none'; base-uri 'none'; form-action 'none'">
+    <title>撤回消息查看</title>
+    <link rel="stylesheet" href="viewer.css">
+    <script src="viewer.js" defer></script>
+</head>
+<body>
+    <aside class="sidebar">
+        <div class="brand"><span class="brand-icon">↶</span><div><h1>撤回消息</h1><p id="totals">正在读取本地记录…</p></div></div>
+        <label class="search"><span aria-hidden="true">⌕</span><input id="search" type="search" placeholder="搜索会话、发送者或内容" aria-label="搜索撤回记录" maxlength="200"></label>
+        <nav id="conversations" aria-label="已保存的会话"></nav>
+        <div class="sidebar-footer"><span id="storage">本地保存</span><button id="refresh" type="button" title="重新读取已保存的记录">刷新记录</button></div>
+    </aside>
+    <main>
+        <header class="chat-header"><div><h2 id="chat-title">撤回消息查看</h2><p id="chat-meta">选择会话，查看已保留的消息</p></div><span class="tip">双击消息定位原会话</span></header>
+        <div id="warning" role="status" hidden></div>
+        <section id="timeline" aria-label="撤回消息列表" tabindex="0">
+            <div id="empty" class="empty"><span class="empty-icon">↶</span><h3>正在读取撤回记录</h3><p>只在本机查看，消息内容不会上传</p></div>
+            <button id="load-more" type="button" hidden>加载更早的记录</button>
+            <div id="messages"></div>
+        </section>
+        <footer class="chat-footer"><span id="result-count">已保存的撤回消息会在这里集中显示</span><span>单击图片放大 · 双击消息定位</span></footer>
+    </main>
+    <div id="toast" role="status" hidden></div>
+    <dialog id="image-preview"><button id="close-preview" type="button" aria-label="关闭图片预览">×</button><img id="full-image" alt="撤回图片预览"><p id="preview-state"></p></dialog>
+</body>
+</html>

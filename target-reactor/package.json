@@ -1,0 +1,7 @@
+{
+  "name": "qqnt-target-reactor",
+  "version": "0.1.0",
+  "private": true,
+  "description": "指定群成员的新消息自动表情回应",
+  "license": "MIT"
+}
